@@ -1,0 +1,341 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	padding: 0;
+	margin: 0;	
+}
+a, ul, li {
+	padding: 0;
+	text-decoration: none;
+}
+
+@font-face {
+    font-family: 'roboto_slabbold';
+	src: url(../Fonts/roboto_slab_bold-webfont.ttf);
+    src: url('../roboto_slab_bold-webfont.woff2') format('woff2'),
+         url('../roboto_slab_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotobold';	
+	src: url(../Fonts/Roboto-Light.ttf);
+    src: url('../Fonts/roboto-bold-webfont.woff2') format('woff2'),
+         url('../Fonts/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotolight';
+    src: url('../Fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('../Fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url('../Fonts/roboto-medium-webfont.woff2') format('woff2'),
+         url('../Fonts/roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../Fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../Fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body > div{font-family: 'fzlantinghei-db-gbkregular,robotolight,robotoregular,robotomedium,robotobold ';}
+/*1920px*/
+.box {
+}
+.topbox {
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	background: url(../images/topbg.gif) no-repeat;	
+	background-size:cover;
+	background-position: center;
+}
+.top {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 48px 0;
+	/*position: relative;*/
+}
+.logo {
+	float: left;
+}
+.nav {
+	float: right;
+	line-height: 48px;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+.nav > a {
+	color: #fff;
+	font-size: 16px;
+	margin: 0 8px;
+}
+.banner {
+	/*background: url(../images/map.png) no-repeat right center;*/
+	height: 400px;
+	padding-top: 80px;
+	margin-top: 40px;
+}
+.banner > h3 {
+	color: #fff;
+	font-weight: normal;
+	font-size: 34px;
+}
+.banner-btn {
+	margin-top: 60px;
+	 font-size: 14px;
+}
+.banner-btn > a {
+	width: 146px;
+	height: 40px;
+	background: url(../images/arrowright.png) no-repeat 120px center #0b0b6f;
+	border: 1px #22277c solid;
+	color: #fff;
+	box-shadow: 2px 2px 5px #080856;
+	float: left;
+	line-height: 40px;
+	padding-left: 10px;
+	margin-right: 20px;
+	border-radius: 2px;
+}
+.beta {	
+	clear: both;
+	height: auto;
+	padding-top: 26px;
+}
+.beta1 {clear: both;
+	height: auto;
+	padding-top: 26px;}
+
+.beta > a{width: 170px;
+    height: 40px;
+    background: url(../images/betabg.png) no-repeat;
+    display: block;
+    color: #fff;
+    line-height: 40px;
+    padding-left: 20px;
+    font-size: 14px;
+    box-shadow: 2px 2px 5px #080856;}
+
+.beta1 > a {
+	width: 276px;	
+	box-shadow: 2px 2px 5px #080856;
+}
+
+
+
+/*第二部分*/
+.TCbox{ width: 1000px; margin: 0 auto; text-align: center; position: relative; bottom: 150px;}
+
+
+
+
+
+/*What is our solution?*/
+.solution{ height: 764px; background: url(../images/bg.png) no-repeat top center; padding-top: 90px; position: relative; bottom: 150px;}
+.sol{ width: 1000px; margin: 0 auto;  color: #0b0b6f;}
+.sol > h3{ text-align: center; font-size: 36px; font-weight: normal;}
+.sol > p{ text-align: center; margin-top: 50px; font-size: 21px;}
+.titleline{ width: 80px; height: 4px; background: #43deee; margin: 0 auto;}
+
+.solist{ list-style: none; width: 950px; margin: 0 auto; padding-left: 50px;}
+.solist li{text-align: left; width: 25%; float: left;}
+.solist li p{ font-size: 15px; font-weight: 550; color: #0b0b6f;}
+.soline{width: 80px; height: 4px; background: linear-gradient(to right, #611f86 , #3f42a2); border-radius:2px; margin: 15px 0 20px;}
+
+.slotxt{ clear: both; list-style: none; padding-top: 20px;}
+.slotxt li{ width:245px; height: 218px; background: linear-gradient(to top, #7e4a9e , #6469b6); float: left; color: #fff; padding: 20px 20px;box-shadow: 2px 2px 8px #f5f1ff; border-radius: 2px;}
+.slotxt li p{ line-height: 23px;font-size: 15px;}
+
+.tm{ width: 1000px; margin: 0 auto; text-align: center;}
+.cel{width: 1000px; margin: 0 auto; text-align: center;}
+
+/*NetCentric Robot Factory*/
+.Robotbox{background: bottom center;background: url(../images/bg.png) no-repeat bottom center; height: 1650px; position: relative; bottom: 150px;}
+.robot{ width: 1000px; margin: 0 auto; color: #0b0b6f; padding-top: 50px;}
+.robot > h3{text-align: center; font-size: 36px; font-weight: normal;}
+.robot > p{ clear: both;text-align: center; margin-top: 80px; font-size: 21px;}
+
+.factory{ width: 800px; margin: 0 auto; padding-top: 20px;}
+.facl{ width: 35%; float: left;}
+.facr{ width: 55%; line-height: 25px; float: left;}
+.facr h3{ font-size:21px; font-weight: normal;}
+.robotlist{ list-style: none;}
+.robotlist li{ float: left;  text-align: center; width: 25%;}
+.robotlist li img{  width: 200px; height: 200px;}
+
+
+.net1{ width: 800px; margin: 0 auto; clear: both;}
+.net1 > div{ float: left;}
+.netxt{ width: 40%; background: #fff;box-shadow: 2px 2px 8px #f5f1ff; padding: 15px; line-height: 23px; margin-top: 60px; font-size: 15px;}
+.netpic{  width: 40%;}
+.netc{width: 1000px; margin: 0 auto; text-align: center; }
+
+/*Team Members*/
+.team{ width: 1000px; margin: 0 auto; clear: both; padding-top: 50px; position: relative; bottom:76px;}
+.team > h3{text-align: center; font-size: 36px; font-weight: normal; color: #0b0b6f;}
+.team > p{clear: both;text-align: center; margin: 5px 0; font-size: 21px; padding: 50px 10px 0 0;font-weight: bold; color: #0b0b6f;}
+.Team1{ list-style:none;}
+.Team1 li{ text-align: center; float: left; height: 214px; padding-top: 19px;}
+.Team1 li h4{ margin:0; color: #27aefa; position: relative;bottom:10px;}
+.Team1 li span{ color:#869cce;position: relative;bottom:8px; font-size: 12px;}
+.Team1 li .uhead{ width: 90px; height: 90px; border-radius: 100px; box-shadow: 6px 6px 40px 0px rgba(183, 204, 227, 1); margin: 18px 0;}
+.Team1 li .teaminfo{ background: #fff; box-shadow: 0px 0px 27px 0px rgba(221, 211, 244, 0.8); width:230px; height: 176px; margin: 0px auto;}
+.Team1 li.swiper-slide-active {padding-top: 0;}
+.Team1 li.swiper-slide-active .teaminfo{ width: 280px; height: 214px;}
+.Team1 li.swiper-slide-active .teaminfo .uhead{width: 116px; height: 116px; margin: 20px 0;}
+
+/*滑动插件重置*/
+.swiper-container{ box-sizing: border-box!important; padding: 0px 10px 30px 10px!important;}
+.new-spage{bottom: 0px!important;}
+.new-spage .swiper-pagination-bullet{ width: 10px; height: 10px; border: 3px solid #fff; background: #562a8e;}
+.new-spage .swiper-pagination-bullet-active{ border-color: #cac0de;}
+
+/*切换*/
+.tab{ width: 100px; margin: 0 auto; clear: both; text-align: center;}
+.tab > a{ float: left; margin: 0 5px;}
+.tab > a img{ vertical-align: middle;}
+
+/*底部*/
+.footbox{ height:200px; background: url(../images/bottombg.png) no-repeat; clear: both; padding-top: 70px;}
+.foot{ width:1000px; margin: 0 auto;}
+.footl{ float: left; padding-top: 70px;}
+.footr{ float:right;}
+.footr a { float: left;margin: 0 24px 20px;}
+
+
+
+
+
+/*团队信息*/
+.Team1 > li div.teamtext {
+	line-height: 15px;
+	font-size: 12px;
+	position: absolute;
+	border-radius: 2px;
+    background: #fff;
+	opacity: 0.8;
+	color: #602086;	
+	padding:15px;
+	top:0;
+	z-index: 1;	
+	overflow: auto;
+	text-align: left;
+	 width: 80%;
+	height:auto;}
+
+.teamtext span {
+	font-size: 10px;
+	text-align:left;
+	color: #fff;
+}
+
+
+.teamin{ width: 16px; height: 16px;}
+.teamin img{ vertical-align: middle; margin-right:3px;}
+
+/*投资者*/
+.Investors{ width: 1000px; margin: 0 auto; clear: both;}
+.Investors > ul{}
+.Investors > ul li{ width: 224px; height:178px; background: url(../images/Investors.png) no-repeat; display: block; float: left; margin: 0 10px;}
+.Investors > p{clear: both;text-align: center; margin: 20px 0; font-size: 21px; padding: 30px 10px 0 0; font-weight: bold; color: #0b0b6f;}
+
+/*1024*/
+@media screen and (max-width: 1024px){
+	.top {
+	width: 900px;
+	margin: 0 auto;
+	padding: 48px 0;
+	/*position: relative;*/
+}
+	.banner > h3 {
+	color: #fff;
+	font-weight: normal;
+	font-size: 30px;
+}
+.solist{ list-style: none; width: 900px; margin: 0 auto;}
+.solist li{text-align: left; width: 25%; float: left;}
+.solist li p{ font-size: 15px; font-weight: 550; color: #0b0b6f;}
+.soline{width: 80px; height: 4px; background: linear-gradient(to right, #611f86 , #3f42a2); border-radius:2px; margin: 15px 0 20px;}
+.foot{ width:900px; margin: 0 auto;}
+
+}
+
+
+/*768*/
+@media screen and (max-width: 768px){
+	.top {
+	width: 800px;
+	margin: 0 auto;
+	padding: 48px 0;
+	/*position: relative;*/
+}
+	.banner > h3 {
+	color: #fff;
+	font-weight: normal;
+	font-size: 24px;
+}
+	
+}
+
+/*414*/
+@media screen and (max-width: 414px){
+	.nav > a {
+	color: #fff;
+	font-size: 16px;
+	margin: 0 4px;
+}
+}
+
+/*新添加*/
+.Team1 li{list-style:none;}
+
+.Th{ width: 1000px; margin: 0 auto; text-align: center; position: relative;bottom: 110px; height: 373px; margin-bottom: 50px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
