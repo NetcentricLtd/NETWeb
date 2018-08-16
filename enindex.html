@@ -8,21 +8,56 @@
 <link href="css/index.css?v=2" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>	
 <script src="js/swiper.min.js"></script>	
+
+<style>
+
+@font-face {
+  font-family: 'Roboto';
+
+  src: url(./fonts/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2) format("truetype");
+  
+}
+
+
+	body{
+		font-family: 'Roboto';
+	}
+</style>
+
 </head>
 	
 <script type="text/javascript">
     $(document).ready(function(){
-      $(".teaminfo img").mouseover(function(){
-        $(this).siblings(".teamtext").show();
+   // $("body").css("font-family","Roboto");
+      $(".teaminfo").mouseover(function(){
+//      $(this).siblings(".teamtext").show();
+		if($(this).parent().hasClass("swiper-slide-active")){
+			$(this).css("height","380px");
+			$(this).css("margin-top","-60px");
+			$(this).children("div").show();
+		}
       });
       $(".teaminfo").mouseleave(function(){
-        $(this).children(".teamtext").hide();
+//      $(this).children(".teamtext").hide();
+//		if($(this).parent().hasClass("swiper-slide-active")){
+			$(this).css("height","");
+			$(this).css("margin-top","0px");
+			$(this).children("div").hide();
+//		}
       });
+      
+      
+      
+      
+      
     });
+    
+    
+    
 </script>
 
 
-<body>
+<body >
 	<div class="box">
 		<!--头部-->
 		<div class="topbox">
@@ -63,12 +98,51 @@ Crypto Quantitative Trading Platform</h3>
 		
 		<!--第二部分-->
 		<div class="TCbox">
-			<img src="images/entc.png">		
+			<div class="TCtitile">
+				<span class="titleft">Traditional Market</span>
+				<span class="titright"> Crypto Market</span>
+			</div>
+			
+			<div class="tcContent" >
+				<img class="tcimgl" src="images/tra1.png">
+				<span class="tctextl">6hours/day<br/>5days/week</span>
+				<img class="tcimgr" src="images/cry1.png">
+				<span class="tctextr" style="margin-right:-19%;;">24hours/day<br/>7days/week</span>				
+			</div>
+			<div class="tcContent" >
+				<img class="tcimgl" src="images/tra2.png">
+				<span class="tctextl">Trade restrction<br/>between country boarder.</span>
+				<img class="tcimgr" src="images/cry2.png">
+				<span class="tctextr" style="margin-right: -23%;">Free trade access <br/>around the globe</span>				
+			</div>
+			<div class="tcContent" >
+				<img class="tcimgl" src="images/tra3.png">
+				<span class="tctextl">Price volatility is <br/>relatively stable</span>
+				<img class="tcimgr" src="images/cry3.png">
+				<span class="tctextr" style="margin-right: -24.5%;">Price volatility is<br/>relatively aggressive</span>				
+			</div>
+			<span class="Vline"></span>
 		</div>
 	
 	<!--add-->	
 	<div class="Th">
-		<img src="images/enTh.png">
+		<div class="thImg">
+			<div class="circularl">
+				<img class="imginc" src="images/TimeCONSUMING.png">
+			</div>
+			<div class="circularr">
+				<img class="imginc" src="images/HighBarrier.png">
+			</div>
+		</div>
+		<div class="thText">
+			<span class="thTitlel">Time—Consuming</span>
+			</br>
+			<span class="thContentl">People often lose sleep worrying about the</br>price movement of all their coins,makeing</br>sense of technical indicators, and trying to</br>spot the best buy and sell opportunity in this</br>volatile market.</span>
+			<span class="thTitler">High Barrier To Entry</span>
+			</br>
+			<span class="thContentr">Quantitative trading often requires users to</br>have expertise in both programming and</br>financial markets.Besides,big institutions</br>control the best trading technologyies and</br>hardwares in the capital market</span>
+		</div>	
+
 	</div>
 	<!--What is our solution?-->
 	<div class="solution">
@@ -98,7 +172,22 @@ Crypto Quantitative Trading Platform</h3>
 					<p>24/7 Non-Stop</p>
 				</li>
 			</ul>
-			<div class="cel"><img src="images/encel.png"></div>
+			<div class="cel">
+				<div class="celtexta" >
+					<span>Create A Robot Trader that Works for you</span></br></br>
+					<label>Users can customize trading strategies into their trading bots.Using indicators such as(MA,MACD,RSI,etc.), news, and trading signals,crypto-bot will take advantage of every opportunity in the market.</label>
+				</div>
+				<div class="celtexta" >
+					<span>Enjoy Life</span></br>
+					<span>Seize the Opportunity</span></br></br>
+					<label>Crypto-bot will automatically try to buy when the market is oversold, and sell when the market is overbought. People can also follow other' trading bots in the marketplace that best match with their trading style.</label>
+				</div>				
+				<div class="celtexta" >
+					<span>Earn Cryptocurrency</span></br>
+					<span>Like A Boss</span></br></br>
+					<label>Users can earn cryptocurrency by setting subscription fees for their trading bots, trading modules, and signals. All transactions are executed on the smart contract to have full transparency and trustworthy.</label>
+				</div>
+			</div>
 			
 			
 		</div>
@@ -127,7 +216,24 @@ Crypto Quantitative Trading Platform</h3>
 				<img src="images/entm.png">
 			</div>
 			<div class="netc">
-				<img src="images/ennetc.png">
+				<div class="netcLine1">
+					<div class="netcTextl">
+						<span>NetCentric ecosystem improve the trasparency and efficiency of wealth management by decentralizing and simplifying the investment and trading processes.</span>
+					</div>
+					<img src="images/robot2.png">
+				</div>
+				<div class="netcLine1">
+					<img src="images/robot3.png">
+					<div class="netcTextr">
+						<span>Everyone can build a basic trading bot<br/> free of charge,develop modules to upgrade your bot,or leverage others' upgrade function to bring your bot to the next level.</span>
+					</div>
+				</div>
+				<div class="netcLine1">
+					<div class="netcTextl">
+						<span>Bot developers can rent out their trading bots, trading signals,and self-developed trading robot modules to earn cryptocurrency as a reward for services they provide.</span>
+					</div>
+					<img src="images/robot3.png">
+				</div>
 			</div>
         </div>
 	</div>
@@ -135,23 +241,23 @@ Crypto Quantitative Trading Platform</h3>
 	
 		<div class="team" id="T3">
 		<h3>Team Members</h3>
-		<div class="titleline" style="margin-bottom: 50px;"></div>
-		<div class="swiper-container swp1">
-		<ul class="Team1 swiper-wrapper">
+		<div class="titleline" style="margin-bottom: 50px; "></div>
+		<div class="swiper-container swp1" style="height: 450px;">		
+		<ul class="Team1 swiper-wrapper" style="margin-top:80px">
 			<li class="swiper-slide">
 				<div class="teaminfo">
 				<img src="images/T1.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/%E9%BB%84%E9%9D%96-jim-huang-520ba578/ " class="teamin" target="_blank"><img src="images/in.png" width="15" height="15"></a>Jing Huang</h4>
-				<span>CO- founder</span>
-				<div class="teamtext" style="display:none;">                 	
-                   ·London School of Economics & Political Science,
+				<span>Co- Founder</span>
+				<div class="teamtext-active" style="display:none;">                 	
+                ·London School of Economics & Political &nbsp;Science,
 				  MS in Informatics
-				·SOAS，University of London, MS in Management<br/>
+				·SOAS,University &nbsp;of London, MS in &nbsp;Management<br/>
 				·Janlent CEO<br/>
 				·Youle.com COO<br/>
-				·COFCO Shanghai, Assistant General Manager<br/>
+				·COFCO Shanghai, Assistant General &nbsp;Manager<br/>
 				·Brewin Dolphin Securities Ltd, Chief <br/>
-				  Representative of China
+				  &nbsp;Representative of China
                 </div>
 				</div>
 			</li>
@@ -159,55 +265,65 @@ Crypto Quantitative Trading Platform</h3>
 				<div class="teaminfo">
 				<img src="images/T2.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/conner-mo-7ab4477/ " target="_blank" class="teamin"><img src="images/in.png" width="15" height="15"></a>Yang Mo Ph.D.</h4>
-				<span>CO- founder</span>
-				<div class="teamtext" style="display:none;">                 	
+				<span>Co- Founder</span>
+				
+				
+				<!--<div class="teaminfo-active" >
+				<img src="images/T2.png" class="uhead">
+				<h4><a href="https://www.linkedin.com/in/conner-mo-7ab4477/ " target="_blank" class="teamin"><img src="images/in.png" width="15" height="15"></a>Yang Mo Ph.D.</h4>
+				<span>CO- founder</span>-->
+				<div class="teamtext-active" style="display: none;">                 	
                   ·University of Cambridge, Ph.D. in Electric 
-				  Engineering<br/>
+				  &nbsp;Engineering<br/>
 				·National Mobile Operating System, 
-				  Project Leader<br/>
-				·Mobile Standard Workgroup of China, Expert<br/>
+				  Project &nbsp;Leader<br/>
+				·Mobile Standard Workgroup of China, &nbsp;Expert<br/>
 				·Foxconn Kortide, Director of Product<br/>
 				·Akomedia, CEO<br/>
-				·University of Cambridge Epson Lab, Researcher
+				·University of Cambridge Epson Lab, &nbsp;Researcher
 					</div> 
-				</div> 
+				</div>
+				<!--</div> -->
 			</li>
+			
 			<li class="swiper-slide">
 				<div class="teaminfo">
 				<img src="images/T3.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/hanchao-yang-6956a122/ " target="_blank" class="teamin"><img src="images/in.png" width="15" height="15"></a>Hanchao Yang Ph.D.</h4>
-				<span>CO- founder</span>
-				<div class="teamtext" style="display:none;">                 	
-                ·Market Value Management for Several Tokens (Market Cap $200M+)<br/>
-				·Stevens Institute of Technology, Ph.D. in Financial Engineering<br/>
+				<span>Co- Founder</span>
+				<div class="teamtext-active" style="display:none;">                 	
+                ·Market Value Management for Several &nbsp;Tokens (Market Cap $200M+)<br/>
+				·Stevens Institute of Technology, Ph.D. in &nbsp;Financial Engineering<br/>
 				·10 Years in Financial Modeling<br/>
 				·Project Experience:<br/>
-				·Large-scale Mortgage Portfolio Risk Management<br/>
+				·Large-scale Mortgage Portfolio Risk &nbsp;Management<br/>
 				·Network Portfolio Theory<br/>
 				·Quantum Trading Strategies<br/>
-				·ACTUS (Algorithmic Contract Type Unified Standards)<br/>
+				·ACTUS (Algorithmic Contract Type Unified &nbsp;Standards)<br/>
 					</div> 
 				</div> 
 			</li>
-			
+
 		</ul>
-			<div class="swiper-pagination new-spage"></div>
+			<div class="swiper-pagination new-spage"></div>			
 		</div>	
+			<div class="swiper-button-prev arrow1l"></div>
+    		<div class="swiper-button-next arrow1r"></div>
 		<p>Advisors</p>
 		
-		<div class="swiper-container swp2">
-		<ul class="Team1 swiper-wrapper">
+		<div class="swiper-container swp2" style="height: 450px;">
+		<ul class="Team1 swiper-wrapper" style="margin-top:80px">
 			<li class="swiper-slide">
 				<div class="teaminfo">
 				<img src="images/G1.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/elie-g-85414b3/ " class="teamin" target="_blank"><img src="images/in.png" width="15" height="15"></a>Elie Galam</h4>
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display:none;">                 	
                  ·Eastmore Group, Chief Investment Officer<br/>
-				·Advisor to Bancor, Legolas Exchange, and Gimli<br/>
-				·Panorama Partner, Chief Investment Officer
+				·Advisor to Bancor, Legolas Exchange, and &nbsp;Gimli<br/>
+				·Panorama Partner, Chief Investment &nbsp;Officer
 				Two Sigma, Portfolio Manager<br/>
-				·Harvard University, Master’s in Applied Mathematics<br/>
-				·Ecole Centrale Paris, Master’s in Engineering<br/>
+				·Harvard University, Master’s in Applied &nbsp;Mathematics<br/>
+				·Ecole Centrale Paris, Master’s in &nbsp;Engineering<br/>
 				·Epson Lab, Researcher
                 </div>   
 				</div>
@@ -216,13 +332,13 @@ Crypto Quantitative Trading Platform</h3>
 				<div class="teaminfo">
 				<img src="images/G2.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/pierre-maarek-037a321/ " class="teamin" target="_blank"><img src="images/in.png" width="15" height="15"></a>Pierre Maarek</h4>
-				<div class="teamtext" style="display:none;">                 	
-                 ·Exane, Head of Equity Derivatives Sales Trading<br/>
-				·Advisor to Shivom, Fusion, Crypterium, Legolas, Kinguin, Opporty.<br/>
-				·com, Protos Cryptocurrency Asset Management<br/>
+				<div class="teamtext-active" style="display:none;">                 	
+                 ·Exane, Head of Equity Derivatives Sales &nbsp;Trading<br/>
+				·Advisor to Shivom, Fusion, Crypterium, &nbsp;Legolas, Kinguin, Opporty.<br/>
+				·com, Protos Cryptocurrency Asset &nbsp;Management<br/>
 				·IXIS Securities, Pan European Equity Sales<br/>
-				·JP Morgan Chase, Risk Management IR Derivative Analyst<br/>
-				·EDHEC Business School, Master’s in Finance<br/>
+				·JP Morgan Chase, Risk Management IR &nbsp;Derivative Analyst<br/>
+				·EDHEC Business School, Master’s in &nbsp;Finance<br/>
 				·Tilburg University, Master’s in Finance<br/>
                 </div>  
 				</div> 
@@ -231,10 +347,10 @@ Crypto Quantitative Trading Platform</h3>
 				<div class="teaminfo">
 				<img src="images/G3.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/mshaalan/" class="teamin" target="_blank"><img src="images/in.png" width="15" height="15"></a>Mohammed S. Shaalan,<br/>CFA, FRM</h4>	
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display: none;">                 	
                  ·Finweavers, Inc., Founder<br/>
 				 ·NetExchange LLC., Partner<br/>
-				 ·Eton Park Capital Management, Head of Risk Reporting<br/>
+				 ·Eton Park Capital Management, Head of Risk &nbsp;Reporting<br/>
 				 ·Viking Global Investors, Solution Architect<br/>
 				 ·Lehman Brothers, Vice President
                 </div>  
@@ -244,19 +360,19 @@ Crypto Quantitative Trading Platform</h3>
 				<div class="teaminfo">
 				<img src="images/G4.png" class="uhead">
 				<h4><a href="" class="teamin"><img src="images/in1.png" width="15" height="15"></a>Jun Liu</h4>
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display:none;top:105px">                 	
                  ·LightInTheBox Holding Co, Co-Founder<br/>
-				·Joyo.com (Acquired by Amazon in 2004),
-				  Vice President<br/>
-				·Zhejiang Donfanghaina, Chairman
-				·Tongji University, <br/>
-				  Master of Business Administration<br/>
-				·Cheung Kong Graduate School of Business, 
-				  Master of Buisiness Ad- ministration<br/>
-				·Fusion Capital, Co-Founder <br/>
-				  (Portfolio companies include:
-				  Newton, DCC, Egretia, Proton, 
-				  Carblock, Popchain, and Dfinity)
+				 ·Joyo.com (Acquired by Amazon in 2004),
+				  &nbsp;Vice President<br/>
+				 ·Zhejiang Donfanghaina, Chairman
+				 ·Tongji &nbsp;University, <br/>
+				  &nbsp;Master of Business Administration<br/>
+				 ·Cheung Kong Graduate School of &nbsp;Business, 
+				  Master of Buisiness &nbsp;Administration<br/>
+				 ·Fusion Capital, Co-Founder <br/>
+				 &nbsp;(Portfolio companies include:
+				  Newton, DCC, &nbsp;Egretia, Proton, 
+				  Carblock, Popchain, and &nbsp;Dfinity)
                 </div>  
 				</div>
 			</li>
@@ -264,12 +380,12 @@ Crypto Quantitative Trading Platform</h3>
 				<div class="teaminfo">
 				<img src="images/G5.png" class="uhead">
 				<h4><a href="" class="teamin"><img src="images/in1.png" width="15" height="15"></a>Dinghe Hu</h4>
-				<div class="teamtext" style="display:none;">                 	
-                 ·Goldstate Securities Co., Executive Vice President<br/>
-				·Graduate School of the People's Bank of China, Ph.D Mentor<br/>
-				·China Economic and Social Council, Council Member<br/>
+				<div class="teamtext-active" style="display:none;">                 	
+                ·Goldstate Securities Co., Executive Vice &nbsp;President<br/>
+				·Graduate School of the People's Bank of &nbsp;China, Ph.D Mentor<br/>
+				·China Economic and Social Council, Council &nbsp;Member<br/>
 				·Lifan Group, Chairman<br/>
-				·Chongqing Chamber of Commerce, Chairman
+				·Chongqing Chamber of Commerce, &nbsp;Chairman
                 </div> 
 				</div> 
 			</li>
@@ -277,12 +393,12 @@ Crypto Quantitative Trading Platform</h3>
 				<div class="teaminfo">
 				<img src="images/G6.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/xunzou/ " target="_blank" class="teamin"><img src="images/in.png" width="15" height="15"></a>David Zou</h4>
-				<div class="teamtext" style="display:none;">                 	
-                 ·Aizhi Information Technology, Chairman & Founder
-				Harvard University, JF Kennedy School of Government, Edward<br/>
+				<div class="teamtext-active" style="display:none;">                 	
+                 ·Aizhi Information Technology, Chairman &nbsp;&Founder
+				Harvard University, JF Kennedy &nbsp;School of Government, Edward<br/>
 				·S. Mason Fellow<br/>
-				·Fiat-Chrysler Group, Director of Government Affairs an Corporate
-				Events (Asia-Pacific Region)<br/>
+				·Fiat-Chrysler Group, Director of Government &nbsp;Affairs an Corporate
+				Events (Asia-Pacific &nbsp;Region)<br/>
 				·Harvard University, MPA<br/>
 				·Cambridge University, M.Phil
                 </div>  
@@ -292,19 +408,21 @@ Crypto Quantitative Trading Platform</h3>
 				<div class="teaminfo">
 				<img src="images/G7.png" class="uhead">
 				<h4><a href="" class="teamin"><img src="images/in1.png" width="15" height="15"></a>Akatsuki Ryu</h4>
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display:none;">                 	
                   ·Co-founder of Avianbury<br/>
 				  ·8 years software and hardware <br/>
                   &nbsp;engineering development <br/>
                   &nbsp;experience Global Hacking Contest <br/>
                   &nbsp;Rankings<br/>
-				(Blockchain Technology Intro-duced in StoraEnso Hacking Game Solution)
+				&nbsp;(Blockchain Technology Intro-duced in &nbsp;StoraEnso Hacking Game Solution)
                 </div>   
 				</div> 
 			</li>
 		</ul>
 			<div class="swiper-pagination new-spage"></div>
 		</div>
+			<div class="swiper-button-prev arrow2l"></div>
+    		<div class="swiper-button-next arrow2r"></div>
 		<!--Investors-->
 		<div class="Investors" id="T4">
 		<p>Investors</p>	
@@ -338,6 +456,10 @@ Crypto Quantitative Trading Platform</h3>
 </body>
 <script>
     var swiper = new Swiper('.swp1', {
+	  navigation: {
+	      nextEl: '.arrow1r',
+	      prevEl: '.arrow1l',
+	  },
       slidesPerView: 3,
       spaceBetween: 30,
 	  initialSlide:1,	
@@ -353,6 +475,10 @@ Crypto Quantitative Trading Platform</h3>
       spaceBetween: 30,
 	  initialSlide:1,
 	  centeredSlides: true,
+	  navigation: {
+	    nextEl: '.arrow2r',
+	    prevEl: '.arrow2l',
+	  },
       pagination: {
 	  el: '.swiper-pagination',
 	  clickable: true,

@@ -9,15 +9,45 @@
 <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>	
 <script src="js/swiper.min.js"></script>			
 </head>
+<style>
+@font-face {
+  font-family: 'PingFang Bold';
+
+  src: url('./fonts/PingFang Bold.ttf');
+  
+}
+
+
+
+
+body{
+	font-family:'PingFang Bold';
+}	
 	
+</style>
 <script type="text/javascript">
     $(document).ready(function(){
-      $(".teaminfo img").mouseover(function(){
-        $(this).siblings(".teamtext").show();
+      $(".teaminfo").mouseover(function(){
+//      $(this).siblings(".teamtext").show();
+		if($(this).parent().hasClass("swiper-slide-active")){
+			$(this).css("height","380px");
+			$(this).css("margin-top","-60px");
+			$(this).children("div").show();
+		}
       });
       $(".teaminfo").mouseleave(function(){
-        $(this).children(".teamtext").hide();
+//      $(this).children(".teamtext").hide();
+//		if($(this).parent().hasClass("swiper-slide-active")){
+			$(this).css("height","");
+			$(this).css("margin-top","0px");
+			$(this).children("div").hide();
+//		}
       });
+      
+      
+      
+      
+      
     });
 </script>
 <style>
@@ -42,7 +72,7 @@
 				<div class="nav">
 					<a href="#"><b>首页</b></a>
 					<a href="#T1">解决方案</a>
-					<a href="#T2">代币生存</a>
+					<a href="#T2">代币体系</a>
 					<a href="#T3">团队</a>
 					<a href="#T4">投资方</a>
 					<a href="http://mynet.netcentric.io/#/app/dashboard">Beta测试版</a>
@@ -51,8 +81,7 @@
 				
 				<!--banner位-->
 				<div class="banner">
-					<h3>一个去中心化，社区化的, <br/>
-数字资产量化交易平台</h3>
+					<h3>一个去中心化，社区化的, <br/>数字资产量化交易平台</h3>
 					
 				<div class="banner-btn" style="margin-top: 55px;;">
 					<a href="download/Netcentric_WhitePaper.pdf" target="_blank">白皮书</a>
@@ -69,12 +98,50 @@
 		
 		<!--第二部分-->
 		<div class="TCbox">
-			<img src="images/tc.png">		
+			<div class="TCtitile">
+				<span class="titleft" style="padding-right: 135px;">传统金融市场</span>
+				<span class="titright">数字货币市场</span>
+			</div>
+			
+			<div class="tcContent" >
+				<img class="tcimgl" src="images/tra1.png">
+				<span class="tctextl">6小时/天<br/>5天/周</span>
+				<img class="tcimgr" src="images/cry1.png">
+				<span class="tctextr" style="margin-right: -16%;">24小时/天<br/>7天/周</span>				
+			</div>
+			<div class="tcContent" >
+				<img class="tcimgl" src="images/tra2.png">
+				<span class="tctextl">跨国交易受严格监管，<br/>资金流动困难</span>
+				<img class="tcimgr" src="images/cry2.png">
+				<span class="tctextr" style="margin-right: -25%;">全球自由化交易<br/>连接互联网，随时交易</span>				
+			</div>
+			<div class="tcContent" >
+				<img class="tcimgl" src="images/tra3.png">
+				<span class="tctextl">市场价格波动相对平稳， <br/>每日平均涨幅1-2%</span>
+				<img class="tcimgr" src="images/cry3.png">
+				<span class="tctextr" style="margin-right: -26.5%;">市场价格波动相对剧烈，<br/>每小时涨幅可达15%</span>				
+			</div>
+			<span class="Vline"></span>		
 		</div>
 	
 	<!--add-->	
 	<div class="Th" style="bottom: 150px;">
-		<img src="images/Th.png">
+		<div class="thImg">
+			<div class="circularl">
+				<img class="imginc" src="images/TimeCONSUMING.png">
+			</div>
+			<div class="circularr">
+				<img class="imginc" src="images/HighBarrier.png">
+			</div>
+		</div>
+		<div class="thText">
+			<span class="cn-thTitlel">高耗时</span>
+			</br>
+			<span class="cn-thContentl">因为数字货币剧烈的价格波动，交易员在执行买卖决</br>策的过程中面临这许多压力，有些人怕错过最好的机</br>会，甚至废寝忘食，日夜不休。</span>
+			<span class="cn-thTitler">高门槛</span>
+			</br>
+			<span class="cn-thContentr"> 传统量化投资策略要求投资者同事具备编程和金融两</br>方面的专业知识。大机构拥有最好的技术和硬件支持</br>普通人参与量化交易有很高的门槛。</span>
+		</div>	
 	</div>	
 	<!--What is our solution?-->
 	<div class="solution">
@@ -91,7 +158,7 @@
 				<li>
 					<img src="images/solution2.gif">
 					<div class="soline"></div>
-					<p>支持100+交易所<br/>瞬时交易</p>
+					<p>支持100+交易所瞬时交易</p>
 				</li>
 				<li>
 					<img src="images/solution3.gif">
@@ -104,7 +171,23 @@
 					<p>24小时不间断</p>
 				</li>
 			</ul>
-			<div class="cel"><img src="images/cel.png"></div>
+			<div class="cel">
+				<div class="celtexta" >
+					<span>创建机器人</span></br>
+					<span>为你工作</span></br></br>
+					<label>用户可以基于K线技术指标（MA,MACD,RSI,等等），新闻指标，和专业交易信号来设计属于自己的交易机器人。机器人会自动帮你抓住市场上的机会。</label>
+				</div>
+				<div class="celtexta" >
+					<span>享受生活</span></br>
+					<span>把握机会</span></br></br>
+					<label>机器人根据用户输入的指令，自动在市场过度恐慌时买入，热度过度疯狂是卖出。从保守型到进取型，从长线稳健投资到短期频繁买卖，机器人的投资模式完全取决于用户的个人喜好。</label>
+				</div>
+				<div class="celtexta" >
+					<span>轻轻松松</span></br>
+					<span>赚币躺赢</span></br></br>
+					<label>用换都可以在市场上自由挂牌交易机器人，交易模块，和交易信号并标明期望的价格来赚取数字货币。所有交易信息都将由智能合约自动执行来确保完全的透明性和可信性。</label>
+				</div>
+			</div>
 		</div>
 	</div>
 		
@@ -132,7 +215,24 @@
 			</div>
 			
 			<div class="netc">
-				<img src="images/netc.png">
+				<div class="netcLine1">
+					<div class="cn-netcTextl">
+						<span>NetCentric通过去中心化的方式连接了每个角色（机器人设计者，投资者，和使用者）。进而打造了一个全新的交易生态。</span>
+					</div>
+					<img src="images/robot2.png">
+				</div>
+				<div class="netcLine1">
+					<img src="images/robot3.png">
+					<div class="cn-netcTextr">
+						<span>用户可以免费创建一个拥有基本功能的交换机器人，通过开发模块来升级机器人，或是租用他人的模块来完善自己的机器人功能。</span>
+					</div>
+				</div>
+				<div class="netcLine1">
+					<div class="cn-netcTextl">
+						<span>机器人开发者可以通过出租他们的交易机器人，交易信号，和自己开发的机器人模块，从而获得数字货币租金奖励。</span>
+					</div>
+					<img src="images/robot3.png">
+				</div>
 			</div>
         </div>
 	</div>
@@ -140,21 +240,21 @@
 	<div class="team" id="T3">
 		<h3><b>团队成员</b></h3>
 		<div class="titleline" style="margin-bottom: 50px;"></div>
-		<div class="swiper-container swp1">
-		<ul class="Team1 swiper-wrapper">
+		<div class="swiper-container swp1" style="height: 450px;">
+		<ul class="Team1 swiper-wrapper" style="margin-top:80px">
 			<li class="swiper-slide">
 				<div class="teaminfo">
 				<img src="images/T1.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/%E9%BB%84%E9%9D%96-jim-huang-520ba578/ " class="teamin" target="_blank"><img src="images/in.png" width="15" height="15"></a>黄靖</h4>
 					<span>联合创始人</span>
-					<div class="teamtext" style="display:none;">                 	
+					<div class="teamtext-active" style="display:none;">                 	
 						·伦敦政治经济学院信息学硕士<br/>
 						·伦敦大学亚非研究学院管理学硕士<br/>
 						·聚立信息 CEO<br/>
 						·悠乐网络 COO<br/>
 						·中粮地产上海分公司总经理助理<br/>
 						·英国Brewin Dolphin证券有限公司<br/>
-						 中国首席代表
+						&nbsp;中国首席代表
 					</div>
 				</div>
 			</li>
@@ -163,10 +263,10 @@
 				<img src="images/T2.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/conner-mo-7ab4477/ " target="_blank" class="teamin"><img src="images/in.png" width="15" height="15"></a>莫阳 Ph.D.</h4>
 					<span>联合创始人</span>
-					<div class="teamtext" style="display:none;">                 	
+					<div class="teamtext-active" style="display:none;">                 	
 					  ·英国剑桥大学电子工程博士<br/>
-					·国家重大专项"手机新型操作系统、
-					  应用平台和中间件的发展策略研究"负责人<br/>
+					·国家重大专项"手机新型操作系统、 应用平台<br/>
+					   &nbsp;和中间件的发展策略研究"负责人<br/>
 					·中国移动Widget标准制定项目组专家<br/>
 					·富士康科集团 产品总监<br/>
 					·美媒软件 CEO<br/>
@@ -179,7 +279,7 @@
 				<img src="images/T3.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/hanchao-yang-6956a122/ " target="_blank" class="teamin"><img src="images/in.png" width="15" height="15"></a>杨瀚超 Ph.D.</h4>
 					<span>联合创始人</span>
-					<div class="teamtext" style="display:none;">                 	
+					<div class="teamtext-active" style="display:none;">                 	
 					·史蒂文斯理工学院金融工程博士<br/>
 					·为多个代币做市商 (市值＞$200M+)<br/>
 					·10年金融建模<br/>
@@ -194,16 +294,18 @@
 						
 		</ul>
 			<div class="swiper-pagination new-spage"></div>
-		</div>	
+		</div>
+			<div class="swiper-button-prev arrow1l"></div>
+    		<div class="swiper-button-next arrow1r"></div>
 		<p>顾问</p>
 		
-		<div class="swiper-container swp2">
-		<ul class="Team1 swiper-wrapper">
+		<div class="swiper-container swp2" style="height: 450px;">
+		<ul class="Team1 swiper-wrapper" style="margin-top:80px">
 			<li class="swiper-slide">
 				<div class="teaminfo">
 				<img src="images/G1.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/elie-g-85414b3/ " class="teamin" target="_blank"><img src="images/in.png" width="15" height="15"></a>Elie Galam</h4>
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display:none;">                 	
                     ·哈佛大学应用数学硕士<br/>
 					·巴黎中央理工学院工程硕士<br/>
 					·爱普生实验室研究员<br/>
@@ -218,7 +320,7 @@
 				<div class="teaminfo">
 				<img src="images/G2.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/pierre-maarek-037a321/ " class="teamin" target="_blank"><img src="images/in.png" width="15" height="15"></a>Pierre Maarek</h4>
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display:none;">                 	
                  ·EDHEC商业学院金融硕士<br/>
 				·蒂尔堡大学金融硕士<br/>
 				·Shivom，Fusion，Crypterium等资产管理顾问<br/>
@@ -232,11 +334,11 @@
 				<div class="teaminfo">
 				<img src="images/G3.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/mshaalan/" class="teamin" target="_blank"><img src="images/in.png" width="15" height="15"></a>Mohammed S. Shaalan,<br/>CFA, FRM</h4>	
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display:none;">                 	
                  ·Finweavers, Inc.,创始人<br/>
 				·NetExchange LLC.,合作伙伴<br/>
-				·Eton Park Capital Management风险报告
-				  负责人<br/>
+				·Eton Park Capital Management风险报告<br/>
+				  &nbsp;负责人<br/>
 				·Viking Global Investors解决方案架构师<br/>
 				·Lehman Brothers副总裁
                 </div>  
@@ -246,15 +348,15 @@
 				<div class="teaminfo">
 				<img src="images/G4.png" class="uhead">
 				<h4><a href="" class="teamin"><img src="images/in1.png" width="15" height="15"></a>刘俊</h4>
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display:none;">                 	
                  ·纽交所上市公司兰亭集势联合创始人<br/>
 				·曾任卓越网副总裁<br/>
-				  卓越网2004年被Amazon收购
-				·浙江东方海纳董事长<br/>
+				 &nbsp;卓越网2004年被Amazon收购
+				·浙江东方<br/>&nbsp;海纳董事长<br/>
 				·同济大学MBA，长江商学院EMBA
-				  Fusion Capital创始合伙人
-				  曾投资了牛顿，DCC，白鹭，质子链，
-				  Carblock，Popchain，Dfinity等知名区块链项目
+				  Fusion &nbsp;Capital创始合伙人
+				  曾投资了牛顿，DCC，<br/>&nbsp;白鹭，质子链，
+				  Carblock,Popchain,Dfinity<br/>&nbsp;等知名区块链项目
                 </div>  
 				</div>
 			</li>
@@ -262,7 +364,7 @@
 				<div class="teaminfo">
 				<img src="images/G5.png" class="uhead">
 				<h4><a href="" class="teamin"><img src="images/in1.png" width="15" height="15"></a>胡定核</h4>
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display:none;">                 	
                  ·中国人民银行研究生院 博士生导师<br/>
 				 ·金州证券公司执行副总裁<br/>
 				 ·中国经济及社会理事会理事<br/>
@@ -275,12 +377,12 @@
 				<div class="teaminfo">
 				<img src="images/G6.png" class="uhead">
 				<h4><a href="https://www.linkedin.com/in/xunzou/ " target="_blank" class="teamin"><img src="images/in.png" width="15" height="15"></a>邹迅</h4>
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display:none;">                 	
                 ·哈佛大学公共管理硕士<br/>
 				·剑桥大学哲学硕士<br/>
 				·爱知信息技术公司董事长兼创始人<br/>
 				·菲亚特-克莱斯勒集团
-				  亚太区政府关系及集团事务总监<br/>
+				  亚太区政府关系<br/>&nbsp;及集团事务总监<br/>
 				·哈佛大学肯尼迪政府学院，爱德华梅森研究员
                 </div>  
 				</div> 
@@ -289,21 +391,23 @@
 				<div class="teaminfo">
 				<img src="images/G7.png" class="uhead">
 				<h4><a href="" class="teamin"><img src="images/in1.png" width="15" height="15"></a>Akatsuki Ryu</h4>
-				<div class="teamtext" style="display:none;">                 	
+				<div class="teamtext-active" style="display:none;">                 	
                    ·芬兰Aalto大学国际设计商业管理(IDBM)硕士<br/>
 					·同济大学信息与通信工程硕士<br/>
 					·现任芬兰Aalto大学软件业务实验室项目经理<br/>
 					·AviranOy联合创始人<br/>
-					·八年以上软硬件工程开发与产品服务设计开发，
-					  参与多项中国政府及欧盟科技研发项目<br/>
+					·八年以上软硬件工程开发与产品服务设计<br/>&nbsp;开发，
+					  参与多项中国政府及欧盟科技研<br/>&nbsp;发项目<br/>
 					·全球多项黑客大赛名次
-					(StoraEnso黑客比赛中引入Blockchain技术)
+					(StoraEnso黑客<br/>&nbsp;比赛中引入Blockchain技术)
                 </div>   
 				</div> 
 			</li>
 		</ul>
 			<div class="swiper-pagination new-spage"></div>
 		</div>
+			<div class="swiper-button-prev arrow2l"></div>
+    		<div class="swiper-button-next arrow2r"></div>
 		<!--Investors-->
 		<div class="Investors" id="T4">
 		<p>投资方</p>	
@@ -338,6 +442,10 @@
 </body>
  <script>
     var swiper = new Swiper('.swp1', {
+	  navigation: {
+	      nextEl: '.arrow1r',
+	      prevEl: '.arrow1l',
+	  },
       slidesPerView: 3,
       spaceBetween: 30,
 	  initialSlide:1,	
@@ -353,6 +461,10 @@
       spaceBetween: 30,
 	  initialSlide:1,
 	  centeredSlides: true,
+	  navigation: {
+	    nextEl: '.arrow2r',
+	    prevEl: '.arrow2l',
+	  },
       pagination: {
 	  el: '.swiper-pagination',
 	  clickable: true,
